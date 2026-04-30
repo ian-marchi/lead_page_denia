@@ -147,11 +147,29 @@ a {
 }
 
 .hero-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.45rem;
   margin: 0;
   color: var(--accent);
-  font-size: 0.98rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.price-old {
+  display: inline-block;
+  color: #c63d3d;
+  text-decoration: line-through;
+  text-decoration-color: #c63d3d;
+  text-decoration-thickness: 2px;
+}
+
+.price-current {
+  color: var(--accent-deep);
+  font-size: 1.22rem;
 }
 
 .hero-button {
@@ -480,8 +498,21 @@ a {
   color: var(--muted);
 }
 
-.price-tag {
+.price-stack {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
   margin: 1.2rem 0 1.5rem;
+}
+
+.price-old-block {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.price-tag {
+  margin: 0;
   font-size: clamp(4.2rem, 12vw, 6.6rem);
   font-weight: 500;
   color: var(--accent);
@@ -548,17 +579,38 @@ a {
   border-radius: 24px;
   box-shadow: 0 24px 60px rgba(77, 41, 28, 0.28);
   backdrop-filter: blur(18px);
+  font-family: "Manrope", sans-serif;
 }
 
 .sticky-cta__price {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.6rem;
+  display: grid;
+  gap: 0.18rem;
+  justify-items: center;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   line-height: 1;
   text-align: center;
 }
 
+.sticky-cta__old-price {
+  color: #ffd1d1;
+  font-size: 0.96rem;
+  font-weight: 700;
+  text-decoration: line-through;
+  text-decoration-color: #ff7b7b;
+  text-decoration-thickness: 2px;
+}
+
+.sticky-cta__current-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
 .sticky-cta__text {
   margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
   text-align: center;
 }
 
@@ -588,6 +640,10 @@ a {
   .sticky-cta__price,
   .sticky-cta__text {
     text-align: left;
+  }
+
+  .sticky-cta__price {
+    justify-items: start;
   }
 
   .button-secondary {
@@ -622,6 +678,10 @@ a {
 
   .hero-actions {
     justify-items: start;
+  }
+
+  .hero-price {
+    justify-content: flex-start;
   }
 
   .hero-ornament-wrap {
