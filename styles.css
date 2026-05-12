@@ -316,6 +316,7 @@ a {
 }
 
 .panel-section,
+.video-section,
 .relief,
 .disclaimer-section {
   display: flex;
@@ -349,6 +350,31 @@ a {
   margin: 0.85rem auto 0;
   max-width: 40rem;
   color: var(--muted);
+}
+
+.video-panel {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.video-embed {
+  width: min(100%, 24rem);
+  margin: 1.6rem auto 0;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: 0 28px 68px rgba(80, 48, 34, 0.16);
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.video-embed iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 0;
+}
+
+.video-cta {
+  margin-top: 1.6rem;
 }
 
 .insight-section h2,
