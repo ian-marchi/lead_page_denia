@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deniavfonseca.github.io/lead_page/sitemap.xml
